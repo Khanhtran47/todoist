@@ -1,8 +1,10 @@
 /* eslint-disable no-nested-ternary */
 import { useState, useEffect } from 'react';
+import moment from 'moment';
+
 import { firebase } from '../firebase';
 
-const collatedTasksExist = () => {};
+import { collatedTasksExist } from '../helpers/index';
 
 export const useTasks = (selectedProject) => {
   const [tasks, setTasks] = useState([]);
@@ -11,7 +13,7 @@ export const useTasks = (selectedProject) => {
     let unsubscribe = firebase
       .firestore()
       .collection('tasks')
-      .where('userId', '==', '7jey1lAmXcK9bz5vPoVo');
+      .where('userId', '==', 'AFwKgdxfBBOX0sdf4kYg');
 
     unsubscribe =
       selectedProject && !collatedTasksExist(selectedProject)
