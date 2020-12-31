@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
-import React from "react";
-import { Checkbox } from "./checkbox";
+import React from 'react';
+import { Checkbox } from './checkbox';
 
-import { useTasks } from "../hooks/index";
+import { useTasks } from '../hooks/index';
 
 export const Tasks = () => {
-  const { tasks } = useTasks("1");
+  const { tasks } = useTasks('1');
 
   console.log(tasks);
 
-  const projectName = "";
+  const projectName = '';
 
   return (
     <div className="tasks" data-testid="tasks">
