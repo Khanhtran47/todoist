@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import { Checkbox } from './Checkbox';
+import { AddTask } from './AddTask';
 
 import { useTasks } from '../hooks/index';
 import { collatedTasks } from '../constants';
