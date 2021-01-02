@@ -9,6 +9,8 @@ import {
 
 import { useSelectedProjectValue } from '../../context';
 
+import { Projects } from '../projects';
+
 export const Sidebar = () => {
   const { setSelectedProjects } = useSelectedProjectValue;
   const [active, setActive] = useState('inbox');
@@ -43,7 +45,6 @@ export const Sidebar = () => {
         <h2>Projects</h2>
       </div>
       <ul className="sidebar__projects">Projects will be here!</ul>
-      Add Project component Here !!!
     </div>
   );
 };
