@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { Checkbox } from './checkbox';
+import { Checkbox } from './Checkbox';
 
 import { useTasks } from '../hooks/index';
 

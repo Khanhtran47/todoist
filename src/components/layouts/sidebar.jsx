@@ -9,7 +9,7 @@ import {
 
 import { useSelectedProjectValue } from '../../context';
 
-import { Projects } from '../projects';
+import { Projects } from '../Projects';
 
 export const Sidebar = () => {
   const { setSelectedProjects } = useSelectedProjectValue;
@@ -44,7 +44,8 @@ export const Sidebar = () => {
         </span>
         <h2>Projects</h2>
       </div>
-      <ul className="sidebar__projects">Projects will be here!</ul>
+      <ul className="sidebar__projects">{showProjects && <Projects />}</ul>
+      {showProjects && <Projects />}
     </div>
   );
 };
