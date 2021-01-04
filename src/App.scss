@@ -247,9 +247,6 @@ header {
   }
 
   li {
-    padding-left: 10px;
-    padding-right: 15px;
-
     &:hover .sidebar__project-delete {
       display: flex;
     }
@@ -259,6 +256,9 @@ header {
     cursor: pointer;
 
     div:nth-child(1) {
+      padding: 5px 0;
+      padding-left: 10px;
+      padding-right: 15px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -600,12 +600,20 @@ header {
 
   &__list li {
     @include task-item();
+    padding: 0;
 
-    span:first-of-type {
-      margin-right: 10px;
+    div:nth-child(1) {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
 
-      svg {
-        fill: grey;
+      span:first-of-type {
+        margin-right: 10px;
+
+        svg {
+          fill: grey;
+        }
       }
     }
   }
