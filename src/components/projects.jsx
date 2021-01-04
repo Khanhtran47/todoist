@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
 
 import { useSelectedProjectValue, useProjectsValue } from '../context';
@@ -23,16 +21,21 @@ export const Projects = ({ activeValue = null }) => {
             ? 'active sidebar__project'
             : 'sidebar__project'
         }
-        onKeyDown={() => {
-          setActive(project.projectId);
-          setSelectedProject(project.projectId);
-        }}
-        onClick={() => {
-          setActive(project.projectId);
-          setSelectedProject(project.projectId);
-        }}
       >
-        <IndividualProject project={project} />
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => {
+            setActive(project.projectId);
+            setSelectedProject(project.projectId);
+          }}
+          onKeyDown={() => {
+            setActive(project.projectId);
+            setSelectedProject(project.projectId);
+          }}
+        >
+          <IndividualProject project={project} />
+        </div>
       </li>
     ))
   );
